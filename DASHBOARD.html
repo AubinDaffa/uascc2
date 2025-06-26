@@ -1,0 +1,218 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B600%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<title>EduPlatform Admin Dashboard</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #0c7ff2;
+      --text-primary: #111827;
+      --text-secondary: #6b7280;
+      --accent-green: #10b981;
+      --accent-red: #ef4444;
+      --surface-background: #f9fafb;
+      --border-color: #e5e7eb;
+      --interactive-bg-hover: #f3f4f6;
+    }
+    .sidebar-link:hover {
+      background-color: var(--interactive-bg-hover);
+      color: var(--primary-color);
+    }
+    .sidebar-link.active {
+      background-color: var(--primary-color);
+      color: white;
+    }
+     .sidebar-link.active svg {
+      color: white;
+    }
+  </style>
+</head>
+<body class="bg-slate-50" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div class="flex h-full grow">
+<aside class="flex flex-col w-64 bg-white border-r border-[var(--border-color)] p-6 space-y-6 fixed top-0 left-0 h-full">
+<div class="flex items-center gap-2">
+<svg fill="var(--primary-color)" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm-80,80a24,24,0,1,1-24-24A24,24,0,0,1,128,112Zm48,72H80a8,8,0,0,1-8-8V160H96a40,40,0,0,0,64,0h24v16A8,8,0,0,1,176,184Z"></path>
+</svg>
+<h1 class="text-[var(--text-primary)] text-xl font-semibold">EduPlatform</h1>
+</div>
+<nav class="flex flex-col space-y-2 flex-grow">
+<a class="sidebar-link active flex items-center gap-3 px-4 py-2.5 rounded-lg" href="#">
+<div class="text-[var(--text-primary)]" data-icon="House" data-size="24px" data-weight="fill">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"></path>
+</svg>
+</div>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="sidebar-link flex items-center gap-3 px-4 py-2.5 rounded-lg" href="#">
+<div class="text-[var(--text-primary)]" data-icon="Users" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"></path>
+</svg>
+</div>
+<p class="text-sm font-medium">Students</p>
+<a href="manage_siswa.html">manage sisWA</a>
+</a>
+<a class="sidebar-link flex items-center gap-3 px-4 py-2.5 rounded-lg" href="#">
+<div class="text-[var(--text-primary)]" data-icon="BookOpen" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h64a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64Z"></path>
+</svg>
+</div>
+<p class="text-sm font-medium">Classes</p></a>
+<a class="sidebar-link flex items-center gap-3 px-4 py-2.5 rounded-lg" href="#">
+<div class="text-[var(--text-primary)]" data-icon="Plus" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+</svg>
+</div>
+<p class="text-sm font-medium">Enrollments</p>
+</a>
+<a class="sidebar-link flex items-center gap-3 px-4 py-2.5 rounded-lg" href="#">
+<div class="text-[var(--text-primary)]" data-icon="Gear" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"></path>
+</svg>
+</div>
+<p class="text-sm font-medium">Settings</p>
+</a>
+</nav>
+<div class="mt-auto space-y-4">
+<button class="flex w-full items-center justify-center rounded-lg h-10 px-4 bg-[var(--primary-color)] text-white text-sm font-semibold leading-normal tracking-wide hover:bg-blue-600 transition-colors duration-150">
+<span class="truncate">New Class</span>
+</button>
+<a class="sidebar-link flex items-center gap-3 px-4 py-2.5 rounded-lg" href="#">
+<div class="text-[var(--text-primary)]" data-icon="Question" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path>
+</svg>
+</div>
+<p class="text-sm font-medium">Help and Support</p>
+</a>
+</div>
+</aside>
+<main class="ml-64 flex-1 p-8 bg-[var(--surface-background)]">
+<div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+<div>
+<h1 class="text-[var(--text-primary)] text-3xl font-bold">Admin Dashboard</h1>
+<p class="text-[var(--text-secondary)] text-sm">Overview of classes and student enrollment.</p>
+</div>
+</div>
+<section>
+<h2 class="text-[var(--text-primary)] text-xl font-semibold mb-4">Class Overview</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+<div class="bg-white p-6 rounded-lg border border-[var(--border-color)] shadow-sm">
+<div class="flex items-center gap-3 mb-2">
+<div class="p-2 bg-blue-100 rounded-full text-[var(--primary-color)]">
+<svg class="lucide lucide-book-open-check" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 3H2v15h7c1.7 0 3 1.3 3 3V7c0-2.2-1.8-4-4-4Z"></path>
+<path d="m16 12 2 2 4-4"></path>
+<path d="M22 6V3h-6c-2.2 0-4 1.8-4 4v14c0-1.7 1.3-3 3-3h7v-2.3"></path>
+</svg>
+</div>
+<p class="text-[var(--text-primary)] text-base font-medium">Total Active Classes</p>
+</div>
+<p class="text-[var(--text-primary)] text-4xl font-bold">12</p>
+<p class="text-[var(--text-secondary)] text-sm mt-1">Currently running</p>
+</div>
+<div class="bg-white p-6 rounded-lg border border-[var(--border-color)] shadow-sm">
+<div class="flex items-center gap-3 mb-2">
+<div class="p-2 bg-green-100 rounded-full text-[var(--accent-green)]">
+<svg class="lucide lucide-users" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+</div>
+<p class="text-[var(--text-primary)] text-base font-medium">Total Enrolled Students</p>
+</div>
+<p class="text-[var(--text-primary)] text-4xl font-bold">256</p>
+<p class="text-[var(--text-secondary)] text-sm mt-1">Across all classes</p>
+</div>
+<div class="bg-white p-6 rounded-lg border border-[var(--border-color)] shadow-sm">
+<div class="flex items-center gap-3 mb-2">
+<div class="p-2 bg-yellow-100 rounded-full text-yellow-500">
+<svg class="lucide lucide-user-plus" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<line x1="19" x2="19" y1="8" y2="14"></line>
+<line x1="22" x2="16" y1="11" y2="11"></line>
+</svg>
+</div>
+<p class="text-[var(--text-primary)] text-base font-medium">New Enrollments (Last 7 Days)</p>
+</div>
+<p class="text-[var(--text-primary)] text-4xl font-bold">15</p>
+<p class="text-[var(--text-secondary)] text-sm mt-1">Trending upwards</p>
+</div>
+</div>
+<div class="bg-white rounded-lg border border-[var(--border-color)] shadow-sm overflow-x-auto">
+<table class="w-full min-w-[700px]">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-6 py-3 text-left text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider">Class Name</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider">Instructor</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider">Students Enrolled</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider">Capacity</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[var(--border-color)]">
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--text-primary)]">Mathematics Grade 5</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">Ms. Angela Martin</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">22</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">25</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-emerald-100 text-emerald-800">Active</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--text-primary)]">Creative Writing Basics</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">Mr. Kevin Malone</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">18</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">20</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-emerald-100 text-emerald-800">Active</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--text-primary)]">Introduction to Coding</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">Dr. Pam Beesly</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">30</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">30</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Full</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--text-primary)]">Art &amp; Craft Fun</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">Ms. Phyllis Vance</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">15</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">20</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-emerald-100 text-emerald-800">Active</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--text-primary)]">Beginner Spanish</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">Mr. Oscar Martinez</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">0</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">15</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Upcoming</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+</div>
+</div>
+
+</body></html>

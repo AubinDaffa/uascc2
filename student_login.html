@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #0c7ff2;
+        --secondary-color: #6b7280;--accent-color: #f3f4f6;--text-primary: #1f2937;--text-secondary: #4b5563;}
+      body {
+        font-family: 'Inter', "Noto Sans", sans-serif;
+      }
+      .form-input {
+        @apply block w-full rounded-lg border-gray-300 shadow-sm focus:border-[var(--primary-color)] focus:ring focus:ring-[var(--primary-color)] focus:ring-opacity-50 transition duration-150 ease-in-out;
+      }
+      .btn-primary {
+        @apply bg-[var(--primary-color)] text-white font-semibold py-3 px-6 rounded-lg hover:bg-opacity-90 transition duration-150 ease-in-out shadow-md hover:shadow-lg;
+      }
+      .btn-secondary {
+        @apply bg-[var(--accent-color)] text-[var(--text-primary)] font-semibold py-3 px-6 rounded-lg hover:bg-gray-200 transition duration-150 ease-in-out shadow-md hover:shadow-lg;
+      }
+    </style>
+</head>
+<body class="bg-gray-50">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+<div class="container mx-auto flex items-center justify-between whitespace-nowrap px-6 py-4">
+<div class="flex items-center gap-3 text-[var(--text-primary)]">
+<div class="size-8 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0ZM12 18H36V21H12V18ZM12 27H24V30H12V27Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_535"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight">EduKids</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors" href="#">Classes</a>
+<a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors" href="#">About Us</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="btn-secondary text-sm px-5 py-2.5">
+<span class="truncate">Sign up</span>
+</button>
+<button class="md:hidden text-[var(--text-secondary)]">
+<span class="material-icons-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-1 items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-md space-y-8 bg-white p-8 sm:p-10 rounded-xl shadow-2xl">
+<div>
+<div class="flex justify-center mb-6">
+<svg class="h-12 w-auto text-[var(--primary-color)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h2 class="text-center text-3xl font-extrabold text-[var(--text-primary)]">
+                Student Login
+              </h2>
+<p class="mt-2 text-center text-sm text-[var(--text-secondary)]">
+                Welcome back, future leader!
+              </p>
+</div>
+<form action="#" class="mt-8 space-y-6" method="POST">
+<input name="remember" type="hidden" value="true"/>
+<div class="rounded-md shadow-sm -space-y-px">
+<div>
+<label class="sr-only" for="student-id">Student ID</label>
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="material-icons-outlined text-gray-400">badge</span>
+</div>
+<input class="form-input pl-10 py-3 placeholder-gray-400" id="student-id" name="student-id" placeholder="Student ID" required="" type="text"/>
+</div>
+</div>
+<div class="pt-4">
+<label class="sr-only" for="password">Password</label>
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="material-icons-outlined text-gray-400">lock</span>
+</div>
+<input autocomplete="current-password" class="form-input pl-10 py-3 placeholder-gray-400" id="password" name="password" placeholder="Password" required="" type="password"/>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<input class="h-4 w-4 text-[var(--primary-color)] focus:ring-[var(--primary-color)] border-gray-300 rounded" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-2 block text-sm text-[var(--text-secondary)]" for="remember-me">
+                    Remember me
+                  </label>
+</div>
+<div class="text-sm">
+<a class="font-medium text-[var(--primary-color)] hover:text-opacity-80" href="#">
+                    Forgot your password?
+                  </a>
+</div>
+</div>
+<div>
+<button class="group relative flex w-full justify-center btn-primary" type="submit">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="material-icons-outlined h-5 w-5 text-white/50 group-hover:text-white">login</span>
+</span>
+                  Login
+                </button>
+</div>
+</form>
+<p class="mt-6 text-center text-sm text-[var(--text-secondary)]">
+              Don't have an account?
+              <a class="font-medium text-[var(--primary-color)] hover:text-opacity-80" href="#">
+                Sign up here
+              </a>
+</p>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

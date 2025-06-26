@@ -1,0 +1,202 @@
+<html><head>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+    <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+    <meta charset="utf-8"/>
+    <title>EduKids - Manage Students</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+          :root {
+            --primary-color: #0c7ff2;
+            --primary-hover-color: #0a68c4;
+            --secondary-color: #e7edf4;
+            --text-primary: #0d141c;
+            --text-secondary: #49739c;
+            --text-light: #ffffff;
+            --border-color: #cedbe8;
+            --background-light: #f8fafc;--danger-color: #ef4444;--danger-hover-color: #dc2626;
+          }
+          .nav-link-active {
+            color: var(--primary-color) !important;
+            font-weight: 700;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 4px;
+          }
+        </style>
+    </head>
+    <body class="bg-[var(--background-light)]" style='font-family: Inter, "Noto Sans", sans-serif;'>
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+    <div class="layout-container flex h-full grow flex-col">
+    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-color)] bg-white px-6 sm:px-10 py-4 shadow-sm">
+    <div class="flex items-center gap-3 text-[var(--text-primary)]">
+    <div class="size-7 text-[var(--primary-color)]">
+    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_6_535)">
+    <path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+    </g>
+    <defs>
+    <clipPath id="clip0_6_535"><rect fill="white" height="48" width="48"></rect></clipPath>
+    </defs>
+    </svg>
+    </div>
+    <h1 class="text-[var(--text-primary)] text-xl font-bold leading-tight tracking-tight">EduKids</h1>
+    </div>
+    <nav class="flex flex-1 justify-center items-center gap-6 mx-8">
+    <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors duration-150" href="#">Dashboard</a>
+    <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors duration-150" href="#">Classes</a>
+    <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors duration-150 nav-link-active" href="#">Students</a>
+    </nav>
+    <div class="flex items-center gap-4">
+    <button aria-label="Notifications" class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-[var(--secondary-color)] hover:bg-slate-200 text-[var(--text-primary)] transition-colors duration-150">
+    <div class="text-[var(--text-primary)]" data-icon="Bell" data-size="20px" data-weight="regular">
+    <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+    </svg>
+    </div>
+    </button>
+    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[var(--primary-color)]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZZTDQYo1o-ZyE99cPu3Kfdn4BSK_nOJMcehvYBM7Hhyi4NDYKbg6S3ASujHok2nbc2-Qt6CJz8LbBGxfl3T8qIGXP7x59Of5dutUjHrfP94cX_iJ3T2ANL2E4nnSZwHpLEJ9Sli47uy6Ml9GVId7uDtpjCndSTDt00o4njzF_78cFXyyxhjxMCmXK2Vcw2EQP9NCfnuPtrk8uWvmdz0XT1n0f_L1ilYWzT1hm6aroemXpYPFuk8Dd3lX2XrLcBOIh0L-Ogu8eLBgV");'></div>
+    </div>
+    </header>
+    <main class="px-6 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-8">
+    <div class="layout-content-container flex flex-col w-full max-w-5xl">
+    <div class="flex flex-wrap items-center justify-between gap-4 mb-8 px-4">
+    <h2 class="text-[var(--text-primary)] text-3xl font-bold tracking-tight">Manage Students</h2>
+    <button class="flex min-w-[84px] items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-5 bg-[var(--primary-color)] hover:bg-[var(--primary-hover-color)] text-[var(--text-light)] text-sm font-semibold leading-normal shadow-md transition-colors duration-150">
+    <svg fill="currentColor" height="18px" viewBox="0 0 256 256" width="18px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+    </svg>
+    <span class="truncate">Add New Student</span>
+    </button>
+    </div>
+    <div class="mb-6 px-4">
+    <label class="flex flex-col min-w-40 w-full">
+    <div class="flex w-full flex-1 items-stretch rounded-lg h-12 shadow-sm border border-[var(--border-color)]">
+    <div class="text-[var(--text-secondary)] flex bg-white items-center justify-center pl-4 rounded-l-lg" data-icon="MagnifyingGlass" data-size="24px" data-weight="regular">
+    <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+    </svg>
+    </div>
+    <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent border-none bg-white h-full placeholder:text-[var(--text-secondary)] px-4 pl-2 text-sm font-normal leading-normal" placeholder="Search students by name or email..." value=""/>
+    </div>
+    </label>
+    </div>
+    <div class="px-4 @container">
+    <div class="overflow-hidden rounded-lg border border-[var(--border-color)] bg-white shadow-md">
+    <table class="w-full">
+    <thead class="bg-slate-100">
+    <tr>
+    <th class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-120 px-6 py-4 text-left text-[var(--text-primary)] text-xs font-semibold uppercase tracking-wider">Name</th>
+    <th class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-240 px-6 py-4 text-left text-[var(--text-primary)] text-xs font-semibold uppercase tracking-wider">Email</th>
+    <th class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-360 px-6 py-4 text-left text-[var(--text-primary)] text-xs font-semibold uppercase tracking-wider">Grade</th>
+    <th class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-480 px-6 py-4 text-left text-[var(--text-primary)] text-xs font-semibold uppercase tracking-wider w-40 text-center">
+                            Actions
+                          </th>
+    </tr>
+    </thead>
+    <tbody class="divide-y divide-[var(--border-color)]">
+    <tr class="hover:bg-slate-50 transition-colors duration-150">
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-120 px-6 py-4 whitespace-nowrap text-[var(--text-primary)] text-sm font-medium">
+                            Sophia Clark
+                          </td>
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-240 px-6 py-4 whitespace-nowrap text-[var(--text-secondary)] text-sm">
+                            sophia.clark@email.com
+                          </td>
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-360 px-6 py-4 whitespace-nowrap text-[var(--text-secondary)] text-sm">Grade 3</td>
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-480 px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
+    <button class="text-[var(--danger-color)] hover:text-[var(--danger-hover-color)] font-semibold transition-colors duration-150 flex items-center gap-1 mx-auto">
+    <svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
+                              Remove
+                            </button>
+    </td>
+    </tr>
+    <tr class="hover:bg-slate-50 transition-colors duration-150">
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-120 px-6 py-4 whitespace-nowrap text-[var(--text-primary)] text-sm font-medium">
+                            Ethan Carter
+                          </td>
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-240 px-6 py-4 whitespace-nowrap text-[var(--text-secondary)] text-sm">
+                            ethan.carter@email.com
+                          </td>
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-360 px-6 py-4 whitespace-nowrap text-[var(--text-secondary)] text-sm">Grade 4</td>
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-480 px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
+    <button class="text-[var(--danger-color)] hover:text-[var(--danger-hover-color)] font-semibold transition-colors duration-150 flex items-center gap-1 mx-auto">
+    <svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
+                              Remove
+                            </button>
+    </td>
+    </tr>
+    <tr class="hover:bg-slate-50 transition-colors duration-150">
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-120 px-6 py-4 whitespace-nowrap text-[var(--text-primary)] text-sm font-medium">
+                            Olivia Bennett
+                          </td>
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-240 px-6 py-4 whitespace-nowrap text-[var(--text-secondary)] text-sm">
+                            olivia.bennett@email.com
+                          </td>
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-360 px-6 py-4 whitespace-nowrap text-[var(--text-secondary)] text-sm">Grade 2</td>
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-480 px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
+    <button class="text-[var(--danger-color)] hover:text-[var(--danger-hover-color)] font-semibold transition-colors duration-150 flex items-center gap-1 mx-auto">
+    <svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
+                              Remove
+                            </button>
+    </td>
+    </tr>
+    <tr class="hover:bg-slate-50 transition-colors duration-150">
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-120 px-6 py-4 whitespace-nowrap text-[var(--text-primary)] text-sm font-medium">
+                            Liam Foster
+                          </td>
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-240 px-6 py-4 whitespace-nowrap text-[var(--text-secondary)] text-sm">
+                            liam.foster@email.com
+                          </td>
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-360 px-6 py-4 whitespace-nowrap text-[var(--text-secondary)] text-sm">Grade 5</td>
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-480 px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
+    <button class="text-[var(--danger-color)] hover:text-[var(--danger-hover-color)] font-semibold transition-colors duration-150 flex items-center gap-1 mx-auto">
+    <svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
+                              Remove
+                            </button>
+    </td>
+    </tr>
+    <tr class="hover:bg-slate-50 transition-colors duration-150">
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-120 px-6 py-4 whitespace-nowrap text-[var(--text-primary)] text-sm font-medium">
+                            Ava Harper
+                          </td>
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-240 px-6 py-4 whitespace-nowrap text-[var(--text-secondary)] text-sm">
+                            ava.harper@email.com
+                          </td>
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-360 px-6 py-4 whitespace-nowrap text-[var(--text-secondary)] text-sm">Grade 1</td>
+    <td class="table-f306de31-b2c5-4258-bb04-48ca31573a06-column-480 px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
+    <button class="text-[var(--danger-color)] hover:text-[var(--danger-hover-color)] font-semibold transition-colors duration-150 flex items-center gap-1 mx-auto">
+    <svg fill="currentColor" height="16" viewBox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
+                              Remove
+                            </button>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    <style>
+                    @media (max-width: 768px) {
+                      .table-f306de31-b2c5-4258-bb04-48ca31573a06-column-240,
+                      .table-f306de31-b2c5-4258-bb04-48ca31573a06-column-360 {
+                        display: none;
+                      }
+                       .table-f306de31-b2c5-4258-bb04-48ca31573a06-column-120{width: 60%;
+                      }
+                       .table-f306de31-b2c5-4258-bb04-48ca31573a06-column-480{
+                        width: 40%;
+                      }
+                    }
+                    @media (max-width: 480px) {
+                      .table-f306de31-b2c5-4258-bb04-48ca31573a06-column-120 {
+                        font-size: 0.8rem;}
+                      .table-f306de31-b2c5-4258-bb04-48ca31573a06-column-480 button {
+                        font-size: 0.8rem;padding: 0.25rem 0.5rem;}
+                       .table-f306de31-b2c5-4258-bb04-48ca31573a06-column-480 svg {
+                        display: none;}
+                    }
+                  </style>
+    </div>
+    </div>
+    </main>
+    </div>
+    </div>
+    
+    </body></html>
