@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Manajemen Siswa (Tabel)</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f0f0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 600px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    input[type="text"] {
+      width: 70%;
+      padding: 10px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #ecf0f1;
+    }
+
+    .hapus-btn {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .hapus-btn:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Daftar Siswa</h2>
+
+    <input type="text" id="namaSiswa" placeholder="Masukkan nama siswa" />
+    <button onclick="tambahSiswa()">Tambah</button>
+
+    <table id="tabelSiswa">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama Siswa</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data siswa akan ditambahkan di sini -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    let nomor = 1;
+
+    function tambahSiswa() {
+      const input = document.getElementById("namaSiswa");
+      const nama = input.value.trim();
+
+      if (nama === "") {
+        alert("Nama siswa tidak boleh kosong!");
+        return;
+      }
+
+      const tabel = document.getElementById("tabelSiswa").getElementsByTagName("tbody")[0];
+      const baris = tabel.insertRow();
+
+      const selNo = baris.insertCell(0);
+      const selNama = baris.insertCell(1);
+      const selAksi = baris.insertCell(2);
+
+      selNo.innerText = nomor++;
+      selNama.innerText = nama;
+
+      const tombolHapus = document.createElement("button");
+      tombolHapus.textContent = "Hapus";
+      tombolHapus.className = "hapus-btn";
+      tombolHapus.onclick = function () {
+        baris.remove();
+        updateNomor();
+      };
+
+      selAksi.appendChild(tombolHapus);
+
+      input.value = "";
+    }
+
+    function updateNomor() {
+      const tabel = document.getElementById("tabelSiswa").getElementsByTagName("tbody")[0];
+      const rows = tabel.getElementsByTagName("tr");
+      nomor = 1;
+      for (let i = 0; i < rows.length; i++) {
+        rows[i].cells[0].innerText = nomor++;
+      }
+    }
+  </script>
+
+</body>
+</html>
